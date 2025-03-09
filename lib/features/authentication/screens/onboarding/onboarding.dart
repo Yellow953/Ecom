@@ -3,17 +3,11 @@ import 'package:ecom/features/authentication/screens/onboarding/widgets/onboardi
 import 'package:ecom/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:ecom/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:ecom/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
-import 'package:ecom/utils/constants/colors.dart';
 import 'package:ecom/utils/constants/text_strings.dart';
-import 'package:ecom/utils/device/device_utility.dart';
-import 'package:ecom/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../../utils/constants/image_strings.dart';
-import '../../../../utils/constants/sizes.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -30,9 +24,9 @@ class OnBoardingScreen extends StatelessWidget {
             controller: controller.pageController,
             onPageChanged: controller.updatePageIndicator,
             children: const [
-              OnBoardingPage(image: TImages.onBoardingImage1, title: TTexts.onBoardingTitle1, subTitle: TTexts.onBoardingSubTitle1),
-              OnBoardingPage(image: TImages.onBoardingImage2, title: TTexts.onBoardingTitle2, subTitle: TTexts.onBoardingSubTitle2),
-              OnBoardingPage(image: TImages.onBoardingImage3, title: TTexts.onBoardingTitle3, subTitle: TTexts.onBoardingSubTitle3),
+              OnBoardingPage(image: JImages.onBoardingImage1, title: JTexts.onBoardingTitle1, subTitle: JTexts.onBoardingSubTitle1),
+              OnBoardingPage(image: JImages.onBoardingImage2, title: JTexts.onBoardingTitle2, subTitle: JTexts.onBoardingSubTitle2),
+              OnBoardingPage(image: JImages.onBoardingImage3, title: JTexts.onBoardingTitle3, subTitle: JTexts.onBoardingSubTitle3),
             ],
           ),
           const OnBoardingSkip(),
