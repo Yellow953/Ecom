@@ -1,3 +1,4 @@
+import 'package:ecom/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:ecom/features/authentication/screens/signup/signup.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,8 +30,7 @@ class JLoginForm extends StatelessWidget {
               decoration: const InputDecoration(
                   prefix: Icon(Iconsax.password_check),
                   labelText: JTexts.password,
-                  suffixIcon: Icon(Iconsax.eye_slash)
-              ),
+                  suffixIcon: Icon(Iconsax.eye_slash)),
             ),
             const SizedBox(height: JSizes.spaceBtwInputFields / 2),
             Row(
@@ -38,13 +38,12 @@ class JLoginForm extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Checkbox(value: true, onChanged: (value){}),
+                    Checkbox(value: true, onChanged: (value) {}),
                     const Text(JTexts.rememberMe),
                   ],
                 ),
-
                 TextButton(
-                  onPressed: (){},
+                  onPressed: () => Get.to(() => const ForgetPassword()),
                   child: const Text(JTexts.forgetPassword),
                 ),
               ],
@@ -53,7 +52,7 @@ class JLoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: (){},
+                onPressed: () {},
                 child: Text(JTexts.signIn),
               ),
             ),
