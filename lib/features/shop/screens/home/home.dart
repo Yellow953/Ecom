@@ -1,7 +1,7 @@
+import 'package:ecom/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
-import '../../../../common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -12,9 +12,11 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
       child: Column(
         children: [
-          JCurvedEdgesWidget(
-            child: JPrimaryHeaderContainer(
-              child: Container(),
+          JPrimaryHeaderContainer(
+            child: Column(
+              children: [
+                JHomeAppBar(),
+              ],
             ),
           ),
         ],
