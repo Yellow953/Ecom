@@ -1,5 +1,6 @@
 import 'package:ecom/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecom/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:ecom/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:ecom/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
@@ -8,6 +9,7 @@ import '../../../../common/widgets/custom_shapes/containers/primary_header_conta
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
+import '../../../../utils/constants/image_strings.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -42,6 +44,16 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                   ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(JSizes.defaultSpace),
+              child: JPromoSlider(
+                banners: [
+                  JImages.promoBanner1,
+                  JImages.promoBanner2,
+                  JImages.promoBanner3,
                 ],
               ),
             ),

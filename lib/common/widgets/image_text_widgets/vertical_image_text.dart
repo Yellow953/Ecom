@@ -42,7 +42,7 @@ class JVerticalImageText extends StatelessWidget {
                 child: Image(
                   image: AssetImage(image),
                   fit: BoxFit.cover,
-                  color: dark ? JColors.light : JColors.dark,
+                  color: dark ? JColors.dark : JColors.light,
                 ),
               ),
             ),
@@ -57,6 +57,7 @@ class JVerticalImageText extends StatelessWidget {
                     .apply(color: textColor),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
+                textAlign: TextAlign.center,
               ),
             ),
           ],
