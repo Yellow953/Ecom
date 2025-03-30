@@ -62,9 +62,8 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: JSizes.spaceBtwSections),
                   JGridLayout(
-                    itemCount: 4,
-                    itemBuilder: (_, index) => const JProductCardVertical(),
-                  ),
+                      itemCount: 4,
+                      itemBuilder: (_, index) => const JProductCardVertical()),
                 ],
               ),
             ),
