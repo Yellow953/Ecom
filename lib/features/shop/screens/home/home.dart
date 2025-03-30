@@ -7,6 +7,8 @@ import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/custom_shapes/containers/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
+import '../../../../common/widgets/products/product_cards/product_card_vertical.dart';
 import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/image_strings.dart';
@@ -49,11 +51,20 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(JSizes.defaultSpace),
-              child: JPromoSlider(
-                banners: [
-                  JImages.promoBanner1,
-                  JImages.promoBanner2,
-                  JImages.promoBanner3,
+              child: Column(
+                children: [
+                  const JPromoSlider(
+                    banners: [
+                      JImages.promoBanner1,
+                      JImages.promoBanner2,
+                      JImages.promoBanner3,
+                    ],
+                  ),
+                  const SizedBox(height: JSizes.spaceBtwSections),
+                  JGridLayout(
+                    itemCount: 4,
+                    itemBuilder: (_, index) => const JProductCardVertical(),
+                  ),
                 ],
               ),
             ),
