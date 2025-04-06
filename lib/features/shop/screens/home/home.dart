@@ -61,6 +61,8 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: JSizes.spaceBtwSections),
+                  JSectionHeading(title: 'Popular Products', onPressed: () {}),
+                  const SizedBox(height: JSizes.spaceBtwSections),
                   JGridLayout(
                       itemCount: 4,
                       itemBuilder: (_, index) => const JProductCardVertical()),

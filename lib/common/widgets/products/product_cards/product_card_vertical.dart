@@ -90,36 +90,39 @@ class JProductCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      JProductPriceText(
-                        price: '35.0',
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                          color: JColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(JSizes.cardRadiusMd),
-                            bottomRight:
-                                Radius.circular(JSizes.productImageRadius),
-                          ),
-                        ),
-                        child: SizedBox(
-                          width: JSizes.iconLg * 1.2,
-                          height: JSizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(
-                              Iconsax.add,
-                              color: JColors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
                 ],
               ),
+            ),
+            const Spacer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: JSizes.sm),
+                  child: JProductPriceText(
+                    price: '35.0',
+                  ),
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    color: JColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(JSizes.cardRadiusMd),
+                      bottomRight: Radius.circular(JSizes.productImageRadius),
+                    ),
+                  ),
+                  child: SizedBox(
+                    width: JSizes.iconLg * 1.2,
+                    height: JSizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(
+                        Iconsax.add,
+                        color: JColors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
