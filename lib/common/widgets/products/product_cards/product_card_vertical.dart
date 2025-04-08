@@ -1,4 +1,5 @@
 import 'package:ecom/common/widgets/images/j_rounded_image.dart';
+import 'package:ecom/common/widgets/texts/j_brand_title_text_with_verified_icon.dart';
 import 'package:ecom/common/widgets/texts/product_title_text.dart';
 import 'package:ecom/utils/constants/colors.dart';
 import 'package:ecom/utils/constants/image_strings.dart';
@@ -68,28 +69,14 @@ class JProductCardVertical extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: JSizes.sm),
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  JProductTitleText(
+                  const JProductTitleText(
                     title: 'Green Nike Air Shoes',
                     smallSize: true,
                   ),
-                  SizedBox(height: JSizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'Nike',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: JSizes.xs),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: JColors.primary,
-                        size: JSizes.iconXs,
-                      ),
-                    ],
-                  ),
+                  const SizedBox(height: JSizes.spaceBtwItems / 2),
+                  JBrandTitleWithVerifiedIcon(title: 'Nike'),
                 ],
               ),
             ),

@@ -7,19 +7,20 @@ class JCartCounterIcon extends StatelessWidget {
   const JCartCounterIcon({
     super.key,
     required this.onPressed,
-    required this.iconColor,
+    this.iconColor,
   });
 
   final VoidCallback onPressed;
-  final Color iconColor;
+  final Color? iconColor;
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
         IconButton(
-            onPressed: onPressed,
-            icon: Icon(Iconsax.shopping_bag, color: JColors.white)),
+          onPressed: onPressed,
+          icon: Icon(Iconsax.shopping_bag, color: JColors.white),
+        ),
         Positioned(
           right: 0,
           child: Container(
