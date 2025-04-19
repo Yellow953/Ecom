@@ -1,13 +1,12 @@
+import 'package:ecom/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
 
 class JCircularImage extends StatelessWidget {
   const JCircularImage({
     super.key,
-    required this.dark,
     this.fit = BoxFit.cover,
     required this.image,
     this.isNetworkImage = false,
@@ -18,7 +17,6 @@ class JCircularImage extends StatelessWidget {
     this.padding = JSizes.sm,
   });
 
-  final bool dark;
   final BoxFit? fit;
   final String image;
   final bool isNetworkImage;
@@ -28,6 +26,7 @@ class JCircularImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = JHelperFunctions.isDarkMode(context);
     return Container(
       width: width,
       height: height,
@@ -39,7 +38,7 @@ class JCircularImage extends StatelessWidget {
       child: Image(
         image: isNetworkImage
             ? NetworkImage(image)
-            : AssetImage(JImages.clothIcon) as ImageProvider,
+            : AssetImage(image) as ImageProvider,
         color: overlayColor,
         fit: fit,
       ),

@@ -33,7 +33,6 @@ class JBrandCard extends StatelessWidget {
           children: [
             Flexible(
               child: JCircularImage(
-                dark: dark,
                 image: JImages.clothIcon,
                 isNetworkImage: false,
                 backgroundColor: Colors.transparent,

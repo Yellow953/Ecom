@@ -1,3 +1,4 @@
+import 'package:ecom/features/personalization/screens/settings/settings.dart';
 import 'package:ecom/features/shop/screens/wishlist/wishlist.dart';
 import 'package:ecom/utils/constants/colors.dart';
 import 'package:ecom/utils/helpers/helper_functions.dart';
@@ -57,8 +58,6 @@ class NavigationController extends GetxController {
     HomeScreen(),
     StoreScreen(),
     FavoriteScreen(),
-    Container(
-      color: Colors.blue,
-    ),
+    SettingsScreen(),
   ];
 }
