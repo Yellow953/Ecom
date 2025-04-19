@@ -10,7 +10,7 @@ class JVerticalImageText extends StatelessWidget {
     required this.image,
     required this.title,
     this.textColor = JColors.white,
-    this.backgroundColor = JColors.white,
+    this.backgroundColor,
     this.onTap,
   });
 
@@ -42,7 +42,7 @@ class JVerticalImageText extends StatelessWidget {
                 child: Image(
                   image: AssetImage(image),
                   fit: BoxFit.cover,
-                  color: dark ? JColors.dark : JColors.light,
+                  color: dark ? JColors.light : JColors.dark,
                 ),
               ),
             ),

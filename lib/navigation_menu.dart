@@ -1,3 +1,4 @@
+import 'package:ecom/features/shop/screens/wishlist/wishlist.dart';
 import 'package:ecom/utils/constants/colors.dart';
 import 'package:ecom/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
@@ -55,9 +56,7 @@ class NavigationController extends GetxController {
   final screens = [
     HomeScreen(),
     StoreScreen(),
-    Container(
-      color: Colors.red,
-    ),
+    FavoriteScreen(),
     Container(
       color: Colors.blue,
     ),
