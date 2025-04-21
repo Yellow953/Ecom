@@ -2,8 +2,10 @@ import 'package:ecom/common/widgets/appbar/appbar.dart';
 import 'package:ecom/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:ecom/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecom/common/widgets/texts/section_heading.dart';
+import 'package:ecom/features/personalization/screens/profile/profile.dart';
 import 'package:ecom/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../common/widgets/list_tiles/user_profile_tile.dart';
@@ -29,7 +31,8 @@ class SettingsScreen extends StatelessWidget {
                         .headlineMedium!
                         .apply(color: JColors.white),
                   )),
-                  const JUserProfileTile(),
+                  JUserProfileTile(
+                      onPressed: () => Get.to(() => const ProfileScreen())),
                   const SizedBox(height: JSizes.spaceBtwSections),
                 ],
               ),
