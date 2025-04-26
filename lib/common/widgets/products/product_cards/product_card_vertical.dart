@@ -1,10 +1,12 @@
 import 'package:ecom/common/widgets/images/j_rounded_image.dart';
 import 'package:ecom/common/widgets/texts/j_brand_title_text_with_verified_icon.dart';
 import 'package:ecom/common/widgets/texts/product_title_text.dart';
+import 'package:ecom/features/shop/screens/product_details/product_detail.dart';
 import 'package:ecom/utils/constants/colors.dart';
 import 'package:ecom/utils/constants/image_strings.dart';
 import 'package:ecom/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../utils/constants/sizes.dart';
@@ -21,7 +23,7 @@ class JProductCardVertical extends StatelessWidget {
     final dark = JHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to(() => const ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
