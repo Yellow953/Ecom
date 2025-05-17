@@ -1,8 +1,10 @@
 import 'package:ecom/common/widgets/texts/section_heading.dart';
 import 'package:ecom/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
+import 'package:ecom/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:ecom/utils/constants/sizes.dart';
 import 'package:ecom/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 
@@ -85,7 +87,8 @@ class ProductDetailScreen extends StatelessWidget {
                       JSectionHeading(
                           title: 'Reviews(199)', showActionsButton: false),
                       IconButton(
-                        onPressed: () {},
+                        onPressed: () =>
+                            Get.to(() => const ProductReviewsScreen()),
                         icon: const Icon(Iconsax.arrow_right_3, size: 18),
                       ),
                     ],
