@@ -2,6 +2,7 @@ import 'package:ecom/common/widgets/appbar/appbar.dart';
 import 'package:ecom/common/widgets/custom_shapes/containers/primary_header_container.dart';
 import 'package:ecom/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecom/common/widgets/texts/section_heading.dart';
+import 'package:ecom/features/personalization/screens/address/address.dart';
 import 'package:ecom/features/personalization/screens/profile/profile.dart';
 import 'package:ecom/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,12 @@ class SettingsScreen extends StatelessWidget {
                     showActionsButton: false,
                   ),
                   const SizedBox(height: JSizes.spaceBtwItems),
+                  JSettingsMenuTile(
+                    title: 'My Addresses',
+                    subtitle: 'Set shopping delivery address...',
+                    icon: Iconsax.safe_home,
+                    onTap: () => Get.to(() => const UserAddressScreen()),
+                  ),
                   const JSettingsMenuTile(
                     title: 'My Cart',
                     subtitle: 'Add, remove products and move to checkout...',

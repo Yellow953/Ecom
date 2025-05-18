@@ -36,7 +36,7 @@ class UserReviewCard extends StatelessWidget {
         Row(
           children: [
             const JRatingBarIndicator(rating: 4.0),
-            const SizedBox(height: JSizes.spaceBtwItems),
+            const SizedBox(width: JSizes.spaceBtwItems),
             Text(
               '01 Nov, 2023',
               style: Theme.of(context).textTheme.bodyMedium,
