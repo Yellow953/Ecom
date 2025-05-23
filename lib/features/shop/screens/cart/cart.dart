@@ -1,10 +1,9 @@
 import 'package:ecom/common/widgets/appbar/appbar.dart';
-import 'package:ecom/common/widgets/texts/product_price_text.dart';
+import 'package:ecom/features/shop/screens/cart/widgets/cart_items.dart';
+import 'package:ecom/features/shop/screens/checkout/checkout.dart';
 import 'package:ecom/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../common/widgets/products/cart/add_remove_button.dart';
-import '../../../../common/widgets/products/cart/cart_item.dart';
+import 'package:get/get.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
@@ -19,39 +18,15 @@ class CartScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineMedium,
         ),
       ),
-      body: Padding(
+      body: const Padding(
         padding: EdgeInsets.all(JSizes.defaultSpace),
-        child: ListView.separated(
-          shrinkWrap: true,
-          separatorBuilder: (_, __) =>
-              const SizedBox(height: JSizes.spaceBtwSections),
-          itemCount: 4,
-          itemBuilder: (_, index) => Column(
-            children: [
-              const JCartItem(),
-              const SizedBox(
-                height: JSizes.spaceBtwItems,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      const SizedBox(width: 70),
-                      const JProductQuantityWithAddRemoveButton(),
-                    ],
-                  ),
-                  JProductPriceText(price: '256')
-                ],
-              ),
-            ],
-          ),
-        ),
+        child: JCartItems(),
       ),
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(JSizes.defaultSpace),
-        child:
-            ElevatedButton(onPressed: () {}, child: Text('Checkout \$ 256.0')),
+        child: ElevatedButton(
+            onPressed: () => Get.to(() => const CheckoutScreen()),
+            child: Text('Checkout \$ 256.0')),
       ),
     );
   }
