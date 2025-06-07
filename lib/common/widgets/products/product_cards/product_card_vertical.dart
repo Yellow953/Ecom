@@ -63,7 +63,7 @@ class JProductCardVertical extends StatelessWidget {
                     right: 0,
                     child:
                         JCircularIcon(icon: Iconsax.heart5, color: Colors.red),
-                  )
+                  ),
                 ],
               ),
             ),
