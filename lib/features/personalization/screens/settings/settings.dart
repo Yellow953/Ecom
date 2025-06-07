@@ -4,6 +4,7 @@ import 'package:ecom/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecom/common/widgets/texts/section_heading.dart';
 import 'package:ecom/features/personalization/screens/address/address.dart';
 import 'package:ecom/features/personalization/screens/profile/profile.dart';
+import 'package:ecom/features/shop/screens/order/order.dart';
 import 'package:ecom/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -59,10 +60,11 @@ class SettingsScreen extends StatelessWidget {
                     subtitle: 'Add, remove products and move to checkout...',
                     icon: Iconsax.shopping_cart,
                   ),
-                  const JSettingsMenuTile(
+                  JSettingsMenuTile(
                     title: 'My Orders',
                     subtitle: 'In-progress and Completed Orders...',
                     icon: Iconsax.bag_tick,
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   const JSettingsMenuTile(
                     title: 'Bank Account',
